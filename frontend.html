@@ -47,13 +47,29 @@ li a{
 li a:hover{
   background-color: #3b0341;
 }
-div.div1 {
+.div1 {
   width:100%;
-  overflow:auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+
 }
-div.div1 div {
-  width:33%;  
+.div1 div {
+  width:100%;  
   float:left;
+}
+.paraclass
+{
+  background-color: tomato;
+  color: white;
+  border: 2px solid blueviolet;
+  margin: 20px;
+  padding: 20px;
+}
+#id1{
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
 }
 </style>
 </head>
@@ -401,8 +417,20 @@ At every level, we collaborate with people around the world to develop and deliv
     <p>Rome is the capital city of Italy.</p>
     <p>Rome has almost 3 million inhabitants.</p>
   </div>
-
-
 </div>
+    <br><br>
+<hr>
+<h1>HTML class And id</h1>
+<p class="paraclass">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse dignissimos natus suscipit nesciunt magnam numquam iure libero nam dolor pariatur </p>
+<p id="id1">Lorem, ipsum dolor.</p>
+<p class="paraclass">Lorem ipsum dolor sit amet.</p>
+<div class="paraclass">Lorem ipsum dolor sit amet consectetur.</div>
+<p id="id2">Lorem ipsum dolor sit.</p>
+<br><br><hr>
+<h1>HTML Iframe and responsive</h1>
+<iframe src="img1.jpg" height="400" width="400" title="Iframe example" frameborder="0"></iframe>
+<br>
+<img src="smile.jpeg" style="width:50%;">
+<p style="font-size:5vw">Hello World</p>
 </body>
 </html>
