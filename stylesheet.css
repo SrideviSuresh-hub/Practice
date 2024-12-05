@@ -1,8 +1,69 @@
-h5{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(183, 116, 116);
-<<<<<<< HEAD
+h1,p{
+    font-size: medium;
 }
-=======
+#pid{
+    color: rgb(169, 219, 44);
+    text-align: right;
 }
->>>>>>> f4c9a60f353c8f1f60458ba4395addc007f65ea4
+.one{
+    font-family:'Times New Roman', Times, serif
+}
+.two{
+    font-size: larger;
+    background-color: rgb(5, 8, 66);
+}
+
+.one.two{
+    font-style: italic;
+    color:rgb(37, 193, 48);
+    background-color: rgb(58, 36, 8);
+}
+p.dotted{
+    border-style: dotted;
+    border-width: .3cm;
+}
+p.dashed {
+    border-style: dashed;
+    border-width: 2em;
+}
+p.solid {
+    border-style: solid;
+    border-width: 3pt;
+    border-color:hsl(0,250%,50%)
+}
+p.double {
+    border-style: double;
+    border-width:5px;
+}
+p.groove {
+    border-style: groove;
+    border-width: thin;
+    border-color: blueviolet;
+}
+p.ridge {
+    border-style: ridge;
+    border-width: thick;
+}
+p.inset {
+    border-style: inset;
+    border-width: medium;
+}
+p.outset {
+    border-style: outset;
+}
+p.none {
+    border-style: none;
+}
+p.hidden {
+    border-style: hidden;
+}
+p.mix {
+    border-style: dotted dashed solid double;
+    border-width: thick;
+}
+p.round{
+    border: 2px solid brown;
+    border-radius:10px;
+    padding:4px;
+    margin:20px;
+}
