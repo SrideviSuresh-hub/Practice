@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 h1,p{
     font-size: medium;
 }
@@ -67,3 +68,240 @@ p.round{
     padding:4px;
     margin:20px;
 }
+=======
+h1,p{
+    font-size: medium;
+}
+#pid{
+    color: rgb(169, 219, 44);
+    text-align: right;
+}
+.one{
+    font-family:'Times New Roman', Times, serif
+}
+.two{
+    font-size: larger;
+    background-color: rgb(5, 8, 66);
+}
+
+.one.two{
+    font-style: italic;
+    color:rgb(37, 193, 48);
+    background-color: rgb(58, 36, 8);
+}
+p.dotted{
+    outline-style: inset;
+    margin:20px;
+    border-style: dotted;
+    border-width: .3cm;
+}
+p.dashed {
+    border-style: dashed;
+    border-width:2px;
+    border-color: rgb(205, 4, 131);
+    margin:3em;
+  outline: thick ridge pink;
+}
+p.solid {
+    border-style: solid;
+    border-width:3pt;
+    outline-style: dotted;
+    outline-width: 5px;
+    border-color:hsl(0,250%,50%);
+    margin: 2em;
+}
+p.double {
+    border-style: double;
+    border-width:5px;
+    outline-style: dotted;
+    outline-width:auto;
+    outline-offset :5px;;
+}
+p.groove {
+    margin-top: 30px;
+    border-style: groove;
+    border-width :-5px;
+    border-color: blueviolet;
+
+}
+p.ridge {
+    border-style: ridge;
+    border-width: thick;
+    padding: 25px;
+    width:40%;
+}
+p.inset {
+    border-style: inset;
+    border-width: medium;
+    padding-left: 40px;
+}
+p.outset {
+    border-style: outset;
+}
+p.none {
+    border-style: none;
+}
+p.hidden {
+    border-style: hidden;
+}
+p.mix {
+    border-style: dotted dashed solid double;
+    border-width: thick;
+}
+p.round{
+    border: 2px solid brown;
+    border-radius:10px;
+    padding:4px;
+    margin:20px;
+}
+.box{
+    background-color: gray;
+    height: 200px;
+    width:400px;
+    padding: 5px;
+    margin: 10px;
+    border: 20;
+}
+.tleft{
+    text-align: left;
+}
+.tleft{
+    text-align: right;
+}
+.tcenter{
+    text-align: center;
+}
+.just{
+    border:2px solid black;
+    padding: 5px;
+    margin: 5px;
+    width:10cm;
+    height:50;
+    text-align:justify;
+
+}
+p.last
+{
+    background-color: none;
+    text-align-last: right;
+    direction: rtl;
+    unicode-bidi:bidi-override;
+    
+}
+.deco1{
+    text-decoration-line: overline;
+    text-decoration-color: blue;
+    text-decoration-style: wavy;
+    text-transform: lowercase;
+}
+.deco2{
+    text-decoration-line:underline;
+    text-decoration-color: chocolate;
+    text-decoration-style: double;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.deco3{
+
+    text-decoration-line: line-through;
+    text-decoration-color: chartreuse;
+    text-decoration-thickness: 2px;
+}
+.deco4{
+    text-transform: capitalize;
+text-decoration-line: overline underline;
+text-decoration-style: solid;
+text-decoration-thickness: 4px;
+}
+.spac1{
+    text-indent: 20;
+    letter-spacing: 2px;
+    line-height: 10px;
+    word-spacing:10px;
+    white-space: nowrap;
+}
+.spac2{
+    
+    white-space:normal;
+   color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.spac3{
+    white-space: pre;
+}
+.spac4{
+    white-space: pre-line;
+}
+.spac5{
+    white-space: pre-wrap;
+}
+.fam{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sty{
+    font-style: italic;
+}
+.wei{
+    font-style: oblique;
+    font-weight: bolder;
+}
+.var{
+    font-variant: small-caps;
+}
+a:link{
+   background-color: rgb(182, 43, 43);
+
+}
+a:visited{
+   background-color: yellow;
+    
+}
+a.hover{
+    text-decoration: underline blue ;
+    color: rgb(223, 205, 205);
+}
+a.active{
+   background-color:hotpink;
+}
+ul.a{
+    list-style-position: inside;
+    
+}
+ul.b{
+    list-style-position: outside;
+    background-color: rgb(160, 73, 73);
+    padding: 10px;
+}
+ul.b li{
+    background: pink;
+    color: rgb(168, 54, 54);
+    margin-left: 3px;
+}
+ul.a{
+    background-color: rgb(28, 90, 177);
+    padding: 5px;
+}
+ul.a li{
+    background: skyblue;
+    color: rgb(87, 87, 225);
+    margin: 3px;
+}
+table,th,td{
+    border: 3px solid black;
+    border-collapse: collapse;
+    height: 1cm;
+    text-align: center;
+    vertical-align:bottom;
+}
+table
+{ width:50%;
+}
+th,td{
+    padding: 2px;
+   /* border-bottom: 2px solid;*/
+}
+tr:hover{
+    background-color: rgb(145, 217, 246);
+    
+}
+>>>>>>> Stashed changes

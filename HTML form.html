@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -169,3 +170,189 @@ value="Submit without validation">
       </form>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="smile.jpeg" target="_top" method="post" autocomplete="on" >
+        <fieldset>
+            <legend > Form1:</legend>
+        <label for="fname">First Name : </label> 
+        <input type="text" id="fname" ><br>
+        <label for="lname">Last Name : </label>
+        <input type="text" id="lname" ><br>
+        <label for="email">Email : </label>
+        <input type="email" name="email" id="email" >
+        <input type="button" value="OK">
+        <input type="submit" name="submit">
+   </fieldset>
+   </form>
+   <br>
+   <form action="">
+    <fieldset>
+        <legend > Form2:</legend>
+    <p>Choose favorite Web language</p>
+    <input type="radio" id="html" name="fav_lang" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_lang" value="CSS">
+    <label for="css" >CSS</label><br>
+    <input type="radio" name="fav_lang" id="javascript" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+</fieldset>
+</form>
+<br>
+<form action="">
+    <fieldset>
+        <legend > Form3:</legend>
+    <p>Select Your technical skills</p>
+    <input type="checkbox" name="skill" id="java" value="Java">
+    <label for="java">JAVA</label>
+    <br>
+    <input type="checkbox" name="skill" id="Advance java" value="Advance JAVA">
+    <label for="Advance Java">Advance Java</label>
+    <br>
+    <input type="checkbox" name="skill" id="html">
+    <label for="html">HTML</label>
+    <br>
+    <input type="checkbox" name="skill" id="css">
+    <label for="css">CSS</label>
+    <br>
+    <input type="checkbox" name="skill" id="js">
+    <label for="js">JavaScript</label>
+    <br>
+    <input type="submit" value="submit">
+</fieldset>
+</form>
+<br>
+
+<form action="">
+    <fieldset>
+        <legend > Form3:</legend>
+    <label for="dept">Choose your department</label>
+    <select name="dept" id="dept" size="2" multiple>
+        <option value="finance">finance</option>
+        <option value="R&D" selected>R&D</option>
+        <option value="Services">Services</option>
+    </select>
+</fieldset>
+</form>
+<br>
+
+<form >
+    <fieldset>
+    <label for="note"> This is textarea</label>
+    <textarea name="message" id="note" rows="10" cols="20"> It is an text area here u can write a message</textarea>
+<br>
+<label for="button"> this is click button</label>
+<button type="button"  id=button onclick="alert('Helloo')"> Click!</button>
+</fieldset>
+    </form>
+    <br>
+    <form >
+        <fieldset>
+        <input list="browser" name="browser">
+        <datalist id="browser">
+            <option value="Chrome">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Opera">
+            <option value="Brave">
+            </datalist>
+            <input type="submit" value="submit">
+    </fieldset>
+      </form>
+      <br>
+      <form  action="smile.jpeg">
+        <fieldset>
+            <legend>Input Types</legend>
+        <label for="name">Name:</label>
+            <input type="text" name="Name" id="name" value="sri" autofocus>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" multiple>
+            <br>
+            <label for="password">Password:</label>
+            <input type="text" name="password" id="password" maxlength="5">
+            <input type="reset" value="Reset">
+            <br>
+            <label for="color">Pick your fav color</label>
+            <input type="color" name="color" id="color" value="fffff" readonly>
+            <br>
+            <label for="date">DOB:</label>
+            <input type="date" name="date" id="date" min="31-12-2023">
+            <br>
+            <label for="date">Current  Date&time:</label>
+            <input type="datetime-local" name="date" id="date">
+            <br>
+            <label for="img">Upload your Image</label>
+            <br>
+            <input type="image" src="img2.jpg" alt="image not found" id="img" height="100px" width="100">
+            <br>
+            <label for="myfile">Select a file:</label>
+            <br>
+            <input type="file" id="myfile" name="myfile">
+            <br><br>
+            <input type="hidden" id="custId" name="custId" value="3487">
+            <br>
+            <label for="bdymonth">Birthday (month & year)</label>
+            <input type="month" name="bdymonth" id="bdymonth" disabled>
+            <br>
+            <br>
+            <label for="quantity">Quantity between(1 & 10):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10">
+            <br><br>
+            <label for="ran">volume(between 0 & 100):</label>
+            <br><input type="range" id="ran" name="ran" min="0" max="100">
+        <br>
+        <label for="searchit">Search</label>
+        <input type="search" id="searchit" id="searchit">
+    <br>
+    <label for="phone"> Enter a phone Number:</label>
+    <br><input type="tel" id="phone" name="phone" placeholder="9999999999" required>
+ <br><small>formate: 0000000000</small><br>
+            <br>
+            <label for="time"> Select a time</label>
+            <input type="time" id="time" name="time">
+            <br>
+            <label for="homepage">Add your homepage:</label>
+            <input type="url" id="homepage" name="homepage">
+          <br>
+          <label for="week">Select a week:</label>
+          <input type="week" id="week" name="week">
+          <br>
+          <label for="country_code">Country code:</label>
+        <input type="text" id="country_code" name="country_code" pattern="[A-Z a-z]{3}">
+        <label for="points">Points:</label>
+        <input type="number" id="points" name="points" step="3">
+        <input type="submit" value="submit">
+        <br>
+        <input type="submit" formaction="image.html" value="submit as button">
+<br>
+<input type="submit" formnovalidate="formnovalidate"
+value="Submit without validation">
+<br>
+<input type="submit" formmethod="post" value="Submit using POST">
+<br>
+<input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+    </fieldset>
+    <label for="but"> click </label>
+    <input type="button" id="but" name="button" value=" click me">
+    <br>
+    <button name="click">button</button>
+      </form>
+
+      <br><br>
+
+      <form action="">
+        <input type="date" name="" id=""> 
+              <input type="date" name="" id="">
+
+      </form>
+</body>
+</html>
+>>>>>>> Stashed changes
