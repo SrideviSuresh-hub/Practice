@@ -1,0 +1,243 @@
+body{
+    margin:0%;
+}
+main{
+    margin: 5%;
+}
+h1{
+    text-align: center;
+}
+#navbar ul{
+    list-style-type: none;
+    background-color: rgb(52, 49, 49);
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+}
+#navbar a{
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+#navbar li{
+    float:left;
+}
+li a:hover:not(.active){
+    background-color: black;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+/* float: right;*/
+}
+.dropdown button{
+    padding: 10px;
+    border: none;
+    background-color: rgb(38, 7, 87);
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+}
+.content{
+    display: none;
+    position: absolute;
+    background-color: rgb(36, 36, 114);
+    min-width: 100px;
+}
+.content a{
+   display:block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+
+ }
+ .content a:hover{
+    background-color: rgb(20, 20, 95);
+ }
+
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: rgb(33, 33, 93);
+}
+
+img{
+    width:300px;
+    height: 200px;
+
+}
+#gallery{
+    display: inline-block;
+    border:2px solid rgb(70, 69, 69);
+    margin : 5px;
+    width:auto;
+}
+#gallery:hover{
+    border-color: black;
+}
+.desc{
+    padding: 10px;
+    text-align: center;
+}
+[class="ex1"]
+{
+    background-color: aqua;
+}
+[class~="ex"]
+{
+    background-color: rgb(133, 133, 52);
+}
+[class|="ex1"]{
+    background-color: rgb(167, 120, 211);
+}
+[class^="ex"]{
+    background-color: rgb(210, 186, 155);
+}
+[class$="ex"]
+{
+    background-color: rgb(163, 218, 107);
+}
+[class*="2"]
+{
+    background-color: rgb(31, 104, 80);
+}
+.counters{
+    counter-reset:part ;
+}
+.counters h2::before{
+    counter-increment: part;
+    content:"part " counter(part)": ";
+}
+p.borim{
+border: 3px solid transparent;
+border-image: url(images\bimg2.jpg) 20 round;
+padding: 20px;
+}
+#grad1{
+    height: 200px;
+    background-image: linear-gradient(red,yellow);/*to bottom*/
+
+}
+#grad2{
+    height: 200px;
+    background-image: linear-gradient(to right,red,yellow);/*to bottom right,(to right*/
+}
+#grad3{
+    height: 200px;
+    background-image: linear-gradient(-90deg,red,yellow);/*180,90,-*/
+}
+#grad4{
+    height: 200px;
+    background-image: linear-gradient(purple,rgb(217, 52, 154),white);
+}
+#grad5{
+    height: 200px;
+    background-image: linear-gradient(to bottom right,rgba(0,255,0,0),rgba(0,255,0,1));
+}
+#grad6{
+    height: 200px;
+    background-image: repeating-linear-gradient(rgb(2, 2, 60),rgb(19, 19, 176) 10%,skyblue 20%);
+}
+#grad7{
+    height: 200px;
+    background-image: radial-gradient(red 10%,yellow 20%,green 40%);
+}
+#grad8{
+    height: 200px;
+    background-image: radial-gradient(circle,red ,yellow ,green);
+}
+#grad9{
+    height: 200px;
+    background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+}
+#grad10{
+    height: 200px;
+    width: 200px;
+    background-image: conic-gradient(rgb(158, 15, 108),rgb(4, 4, 95),yellow);
+}
+#grad11{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-image: conic-gradient(rgb(158, 15, 108) ,green,rgb(4, 4, 95),red,yellow);
+}
+#grad12{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-image: conic-gradient(at 60% 45%, red, yellow, green);
+
+}
+h2#shadow1{
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+}
+h2#shadow2{
+    color: rgb(20, 15, 15);
+    text-shadow: 2px 2px ;
+}
+h2#shadow3{
+    color: rgb(128, 13, 59);
+    text-shadow: 2px 2px blue ;
+}
+h2#shadow3{
+    color: rgb(6, 11, 75);
+    text-shadow: 0 0 2px rgb(170, 6, 104) ;
+}
+h2#shadow4{
+    color: rgb(6, 11, 75);
+    text-shadow: 0 0 2px rgb(170, 6, 104) ,0 0 3px black;
+}
+h2#shadow5{
+    color: coral;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .clip
+  {
+    border:2px solid black;
+    background-color: aqua;
+    text-overflow: clip;
+    height: 20px;
+    width:500px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ellipsis{
+    border:2px solid black;
+    background-color: aqua;
+    text-overflow: ellipsis;
+    height: 20px;
+    width:400px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+.clip:hover{
+    overflow: visible;
+}
+.ellipsis:hover{
+    overflow: visible;
+}
+.word{
+  
+    width: 150px;
+    border: 2px solid black;
+   word-wrap: break-word
+}
+.word1{
+  
+    width: 150px;
+    border: 2px solid black;
+   word-break:keep-all;
+   word-wrap:break-word;
+}
+.word3{
+  
+    width: 150px;
+    border: 2px solid black;
+    word-break: break-all;
+}
+

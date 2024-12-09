@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 h1,p{
     font-size: medium;
 }
@@ -68,7 +67,6 @@ p.round{
     padding:4px;
     margin:20px;
 }
-=======
 h1,p{
     font-size: medium;
 }
@@ -248,21 +246,6 @@ text-decoration-thickness: 4px;
 .var{
     font-variant: small-caps;
 }
-a:link{
-   background-color: rgb(182, 43, 43);
-
-}
-a:visited{
-   background-color: yellow;
-    
-}
-a.hover{
-    text-decoration: underline blue ;
-    color: rgb(223, 205, 205);
-}
-a.active{
-   background-color:hotpink;
-}
 ul.a{
     list-style-position: inside;
     
@@ -304,4 +287,157 @@ tr:hover{
     background-color: rgb(145, 217, 246);
     
 }
->>>>>>> Stashed changes
+
+#inline{
+ height: 50px;
+}
+#inline p{
+    background-color: rgb(167, 30, 117);
+   padding: 10px;
+    display: inline;
+}
+#inline p span{
+    background-color: black;
+    padding: 10px;
+    color: aliceblue;
+}
+
+#block{
+    display: block;
+}
+#list-item{
+    height: 50px;
+   }
+   #list-item p{
+       background-color: rgb(167, 30, 117);
+      padding: 10px;
+       display: inline;
+   }
+   #list-item p span{
+       background-color: black;
+       padding: 10px;
+       color: aliceblue;
+   }
+   div.ex1{
+    width: 600px;
+    border: 2px solid rgb(142, 30, 30);
+    margin: 10;
+}
+div.ex2{
+    max-width: 600px;
+    border: 2px solid rgb(151, 29, 29);
+    margin: 10;
+}
+.overflowex{
+    height: 200px;
+    width: 300px;
+    background-color: brown;
+    border: 2px solid purple;
+    overflow:scroll;
+}
+img{
+    float: left;
+}
+#floatex{
+    border: 3px solid black;
+    clearf
+}
+.div1{
+    border: 3px solid #821a1a;
+    float: left;
+    padding: 10px;
+}
+.div2{
+    border: 3px solid black;
+    padding: 10px;
+}
+.div1{
+    border: 3px solid #821a1a;
+    float: left;
+    padding: 10px;
+}
+.div2{
+    border: 3px solid black;
+    padding: 10px;
+    clear:left;
+}
+span.a{
+    display: inline;
+    border:2px solid black;
+    background-color: aqua;
+    height: 10px;
+    width: 10px;
+    padding:2px;
+    margin:5px
+}
+span.b{
+    display: inline-block;
+    border:2px solid black;
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    padding:2px;
+    margin:5px
+}
+span.c{
+    display:block;
+    border:2px solid black;
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    padding:2px;
+    margin:5px
+}
+.allign p{
+    margin: auto;
+    width:50%;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: right;
+
+}
+ img.img1cen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+.combo 
+{
+    border: 2px solid black;
+}
+.combo+p{
+    background-color: rgb(158, 227, 227);
+}
+.pseudoe p{
+    display: none;
+    background-color: yellow;
+    padding: 10px;
+}
+div.pseudoe:hover p{
+    display: block;
+}
+div.combo p:first-child i
+{
+color: #d03030;
+}
+p.pseudoclass::first-letter{
+    font-style: italic;
+    font-size: 1.2em;
+}
+p.pseudoclass::first-line{
+    background-color: aqua;
+    font-size: medium;
+}
+p.pseudoclass::selection{
+background-color: rgb(199, 237, 116);
+}
+.fruits li::before{
+    content:"✅";
+}
+#ap::after{
+    content:"🍎";
+}
+#or::after{
+    content:"🍊";
+}
