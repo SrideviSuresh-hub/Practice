@@ -240,4 +240,478 @@ h2#shadow5{
     border: 2px solid black;
     word-break: break-all;
 }
+.wor1{
+    writing-mode: horizontal-tb;
+}
+span.wor2{
+    writing-mode: vertical-lr;
+}
+.wor2{
+    writing-mode: vertical-rl;
+}
+.box1{
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(235, 191, 133);
+    font-size: 5em;
+    text-align: center;
+    transform: translate(100%,100%);
+}
+.box2{
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(133, 176, 235);
+    font-size: 5em;
+    text-align: center;
+    transform:scale(100%,50%)
+}
+.box3{
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(190, 71, 132);
+    font-size: 5em;
+    text-align: center;
+    transform:rotate(90deg,45deg);
+}
+.box4{
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(130, 207, 111);
+    font-size: 5em;
+    text-align: center;
+    transform:skew(-30deg,30deg)
+}
+.box5{
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(209, 237, 71);
+    font-size: 5em;
+    text-align: center;
+    transform: translateX(40%) rotate(180deg) skew(-50deg);
+}
+/*.box6{
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(241, 44, 90);
+    font-size: 5em;
+    text-align: center;
+    transform: matrix(.5,30deg,30deg, .5,50%,50%);
+}*/
+.box6{
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(241, 44, 90);
+    font-size: 5em;
+    text-align: center;
+    transform: scale3d(1.5,1,1.8);
+}
+.box7{
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(241, 44, 90);
+    font-size: 5em;
+    text-align: center;
+    transform: translate3d(100%,1,1);
+}
+.box8{
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(241, 44, 90);
+    font-size: 5em;
+    text-align: center;
+    transform: rotate3d(1,1,1,90deg)
+}
+#t1{
+    height: 100px;
+    width:100px ;
+    background-color: black;
+    transition: width 2s,height 4s;
+}
+#t1:hover{
+    width: 300px;
+    height:200px;
+}
+#t2{
+    height: 100px;
+    width:100px ;
+    background-color: black;
+    transition-property: width;
+    transition: width 2s;
+    transition-timing-function:easy-in;
+}
+#t2:hover{
+    width: 300px;
+ 
+}
+#t3{
+    height: 100px;
+    width:100px ;
+    background-color: black;
+    
+    transition: width 2s,height 4s;
+    transition-timing-function: ease-in;
+    transition-delay: 2s;
+    transition-duration: 4s;
+}
+#t3:hover{
+    width: 300px;
+    height:200px;
+}
+#t4{
+    height: 100px;
+    width:100px ;
+    background-color: black;
+    transition: width 2s,height 2s, transform 2s;
+}
+#t4:hover{
+    width: 300px;
+    height:200px;
+    transform: rotate(180deg);
+}
+div.a1{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    animation-iteration-count: infinite;
+    animation-name:slideleft;
+    animation-duration: 3s;
 
+}
+
+div.a2{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(101, 10, 83);
+   animation-delay: 3s;
+  
+   animation-iteration-count: infinite;
+    animation-name: rotatex;
+    animation-duration: 3s;
+}
+div.a4{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(6, 6, 6);
+   position: relative;
+    animation: colors 5s linear 2s infinite alternate;
+   
+
+}
+
+    div.a3{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(66, 192, 52);
+       position: relative;
+       animation-delay: 3s;
+       animation-direction: alternate;
+      animation-iteration-count: infinite;
+        animation-name:colorslide;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+     
+    }
+    div.a4{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(6, 6, 6);
+       position: relative;
+        animation: colors 5s linear 2s infinite alternate;
+    }
+    div.a5{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(2, 2, 59);
+        animation-iteration-count: infinite;
+        animation-name:slideup;
+        animation-duration: 3s;
+        animation-direction: alternate-reverse;
+    }
+  
+
+@keyframes slideleft{
+    from{transform: translateX(300%)}
+}
+@keyframes slideright{
+    to{transform: translateX(300%)}
+}
+@keyframes slideup{
+    from{transform: translateY(300%)}
+}
+@keyframes slidedown{
+    to{transform: translateY(300%)}
+}
+@keyframes rotatex{
+    100%{transform: rotateX(360deg)}
+}
+@keyframes rotatey{
+    100%{transform: rotateY(360deg)}
+}
+@keyframes rotatez{
+    100%{transform: rotateZ(360deg)}
+}
+@keyframes glow{
+    100%{text-shadow: 2px 2px rgb(182, 113, 73);}
+}
+
+@keyframes colors{
+    0% {background-color: yellow;}
+    25% {background-color: rgb(27, 4, 4);}
+    50% {background-color: pink;}
+    100% {background-color: rgb(226, 21, 14);}
+}
+
+@keyframes colorslide{
+    0% {background-color: rgb(215, 215, 121); left:0px; top: 0px;}
+    25% {background-color: rgb(229, 99, 99); left:200px; top: 0px;}
+    50% {background-color: rgb(96, 146, 203); left:200px; top:200px;}
+    75% {background-color: rgb(214, 83, 190); left:0px; top:200px;}
+    100% {background-color: rgb(111, 208, 131); left:0px; top: 0px;}
+}
+#img1{
+    border-radius: 50%
+    filter: blur(2px);
+}
+#img2{
+    border: 1px solid rgb(52, 49, 49);
+    padding: 10px;
+    width: 250px;
+    border-radius: 4px;
+    filter: brightness(150%);
+}
+#img2:hover{
+    box-shadow: 0 0 2px 1px rgba(58, 4, 47, 0.5);
+}
+#img3{
+    width:1000px;
+    height: 200px;
+    max-width: 100%;
+    height: auto;
+    filter: contrast(10%);
+}
+#imgcont{
+    position: relative;
+  }
+  
+ .topleft {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+   /* transform: translate(-50%, -50%);*/
+    font-size: 18px;
+  }
+  
+  #img4 { 
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+    
+}
+.img5{
+    margin:auto;
+    width:50%;
+    display:block;
+    filter: drop-shadow(10px 10px 7px rgb(53, 122, 135));
+  }
+  .img6{
+    justify-content: center;
+    display: flex;
+    filter: hue-rotate(50deg);
+  }
+  #img6{
+    width: 50%;
+  
+  }
+  .img7{
+    justify-content: center;
+    display: flex;
+    height: 600px;
+    border: 2px solid;
+    align-items: center;
+    filter: grayscale(100%);
+  }
+  #img7{
+    width: 50%;
+    height: 50%;
+    border: none;
+  }
+  .img8{
+    -webkit-box-reflect: right 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  }
+  .img9{
+    height: 200px;
+    width: 500px;
+    object-fit: fill;
+    object-position: 100% 50%;
+  }
+  .mask{
+   
+        -webkit-mask-image: linear-gradient(rgb(202, 33, 87), transparent);
+        mask-image: linear-gradient(rgb(191, 38, 38), transparent);
+      }
+ .button {
+       
+        border: none;
+        color: white;
+       
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        padding: 20px 20px ;
+        cursor: pointer;
+     }
+      .button1{
+         background-color: #03462e;
+        font-size: larger;
+        padding: 45px 30px;
+        border-radius: 50%;
+        opacity: 0.7;
+        }
+        .button1:hover{
+           opacity: 1;
+        }
+      .button2 {
+        background-color: #008CBA;
+        font-size: xx-large;
+        padding: 25px 25px;
+        border-radius: 10%;
+        border:2px dotted #cda1bb;
+        }
+        .button2:hover{
+            background-color: white;
+            color: black;
+        } 
+      .button3 {
+        background-color: #d53595;
+        font-size:20px ;
+        padding: 15px 32px;
+        border-radius: 90%;
+        outline: none;
+        box-shadow: 0 9px #999;
+    }
+    .button3:hover {background-color: #c52d8b}
+
+.button3:active {
+  background-color: #95286b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+      .button4 {
+        background-color: #e7e7e7;
+         color: black;
+         font-size: 5px;
+         padding: 10px 30px;
+         border:2px  solid black;
+         cursor: not-allowed;
+        }
+      .button5 {background-color: #555555;
+        padding: 10px 10px;
+        width: 100px;
+        
+    } 
+    .button5:hover{
+        box-shadow: 0 12px 16px 0 rgba(147, 11, 11, 0.24), 0 17px 50px 0 rgba(11, 32, 128, 0.19);
+    }
+    .button6{
+        vertical-align: middle;
+        border-radius: 4px;
+        color: white;
+        transition: all 0.5s;
+        background-color: #d53595;
+
+    }
+    .button6 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+      .button6 span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      .button:hover span {
+        padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      div.resize {
+        border: 2px solid;
+        padding: 20px; 
+        width: 300px;
+        resize: both;
+        overflow: auto;
+      }
+      div.ex2 {
+        margin: 10px;
+        border: 1px solid black;
+        outline: 5px dashed rgb(20, 20, 59);
+        outline-offset: 5px;
+      }
+      div.news{
+        column-count: 3;
+        column-gap: 20px;
+        column-width: 1px;
+        column-rule: 1px solid rgb(124, 207, 14);
+      }
+      #h1{
+        column-span: all;
+      }
+      :root{
+        --blue: #008CBA;
+        --black:black;
+        --white: white;
+        --
+      }
+      .varcont{
+        background-color: var(--blue);
+        border: 2px solid var(--black);
+        padding: 10px;
+      }
+      .varcont h1{
+        color:var(--black);
+      }
+      .varcont p{
+        background-color:var(--white);
+        padding: 10px;
+      }
+      .boxdiv1 {
+        width: 300px;
+        height: 100px;
+        border: 1px solid blue;
+         padding: 50px;
+        box-sizing: border-box;
+      }
+      
+      #boxdiv22 {
+        width: 300px;
+        height: 100px;  
+        padding: 50px;
+        border: 1px solid red;
+       background-color: none;
+      }
+      @media screen and (max-width:700px){
+        body{
+            background-color: #cda1bb;
+        }
+      }
