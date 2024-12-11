@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1st_func(){
+            document.getElementById("demo5").innerHTML="para changed.";
+        }
+    </script>
+  
+</head>
+<body>
+    <h1>JavaScript  Practice</h1>
+    <p id="demo1"> Lorem ipsum dolor sit.</p><hr>
+    <button type="button" onclick="document.getElementById('demo1').style.fontSize='20px'"> font change</button><br><br>
+    <p id="demo2"> Lorem ipsum dolor sit.</p><hr>
+    <button type="button" onclick="document.getElementById('demo2').innerHTML='Hello Javascript!!!'"> click me</button><br><br>
+    <p id="demo3"> Lorem ipsum dolor sit.</p><hr>
+    <button type="button" onclick="document.getElementById('demo3').style.display='none'">hide</button>
+    <br><br>
+    <p id="demo4" style="display:none;"> Lorem ipsum dolor sit.</p><hr>
+    <button type="button" onclick="document.getElementById('demo4').style.display='block'"> show</button>
+    <br><br>    
+    <p id="demo5"> Lorem ipsum dolor sit.</p><hr>
+    <script>
+        document.getElementById("demo5").innerHTML="using script tag";
+    </script>
+    <hr>
+    <button type="button" onclick="f1st_func()"> func click</button><br><br>
+    <script src="/Javascript/JSPractice.js"></script>
+    <p id="demo6"> </p>
+
+    <br>
+    <p id="demo7"> </p><hr>
+    <br><p id="demo8"> </p>
+    <button type="button" onclick="f2sec_func()"> exterfunc click</button>
+    <hr><br><p id="demo9"> </p>
+    <p id="demo10"> </p>
+    <button type="button" onclick="myFunction()">String Func</button>
+    <br><br>
+    <script>
+        document.write(5+10);
+        window.alert("HIIIIII");//alert();
+        console.log(5+5);
+        let a,b,c;
+        a=2;
+        b=3;
+        c=a*b;
+        let petName;//="ramu";
+        document.getElementById("demo6").innerHTML="c = "+c; 
+        document.getElementById("demo7").innerHTML=petName;
+        function myFunction() {
+             document.getElementById("demo9").innerHTML = "Hello!";
+            document.getElementById("demo10").innerHTML = "How are you?";
+        }
+    </script>
+    <br>
+    <!--<button type="button" onclick="document.write(10+5)"> click</button>-->
+<button type="button" onclick="window.print()"> print this page</button>
+<hr>
+
+
+<h1>redeclaring</h1>
+<p id="demo11"></p>
+<p id="ex1"></p>
+<script>
+    car="volvo";
+    document.getElementById("demo11").innerHTML=car;
+    var car;
+    let $= '5' + 2.0 + 2;
+    let $$=  2 + 2 +  '5';
+    console.log($);
+    console.log($$);
+   /* let u = true;
+   let v = false;*/
+   let r= BigInt("123456789012345678901234567890");
+document.getElementById("ex1").innerHTML = r; 
+</script>
+<script>
+    var x=10;
+    {
+        var x=5;
+    }
+   console.log(x);
+   let y=10;
+    {
+       let y=10;
+    }
+   console.log(y);
+
+</script>
+<p id="demo"></p><hr>
+
+<script>
+    try {
+        carName = "Saab";
+        let carName = "Volvo";
+    }
+    catch(err) {
+        document.getElementById("demo").innerHTML = err;
+    }
+    
+</script>
+<p id="demo13"></p>
+<script>
+try{
+    const PI=3.141;
+    PI=3.1;
+}
+catch(err){
+    document.getElementById("demo13").innerHTML = err;
+}
+</script>
+<p id="demo14"></p>
+<script>
+    const  t = 10;
+  
+    {  
+    const t = 2;
+    }
+    document.getElementById("demo14").innerHTML = "t is " + t;
+    </script>
+   
+   <p id="demo14"></p>
+    <script>
+    try {
+      alert(carName);
+      const carName = "Volvo";
+    }
+    catch (err) {
+      document.getElementById("demo14").innerHTML = err;
+    }
+    let z= 3;
+    let w= (100 + 50) * z;
+    console.log(w);
+    let  d= 10;
+    d **= 2;
+    console.log(d);
+    let text1 = "25";
+        let text2 = "5";
+        let result = text1 < text2;
+        document.getElementById("demo16").innerHTML = "Is A less than B? " + result;
+       
+    </script>
+<br><hr>
+
+    <p class="demo16"></p>
+    <script>
+       </script>
+        <p id="dem017"></p>
+        <script>
+        let t1 = "John";
+        let t2 = "Doe";
+        let t3 = t1 + " " + t2;
+        document.getElementById("demo17").innerHTML = t3;
+        </script>
+</body>
+</html>
