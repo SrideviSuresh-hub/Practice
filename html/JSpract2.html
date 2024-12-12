@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      // document.addEventListener("DOMContentLoaded", function() { });
+        </script>
+</head>
+<body>
+
+    <h1>  Operators</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p><br>
+    <p id="demo5"></p><br>
+    <p id="demo6"></p><br>
+    <p id="demo7"></p><br>
+    <p id="demo8"></p><br>
+    <p id="demo9"></p><br>
+    <p id="demo10"></p><br>
+    <p id="demo11"></p><br>
+    <p id="demo12"></p><br>
+    <p id="demo13"></p><br>
+    <p id="demo14"></p><br>
+    <p id="demo15"></p><br>
+    
+    <br>
+    <button onclick="document.getElementById('demo12').innerHTML=Date()" style="background-color: aqua;"> the time is?</button>
+    <button onclick="this.innerHTML=Date()" style="background-color: rgb(129, 211, 106);"> the time is?</button>
+    <button onclick="displayDate()" style="background-color: rgb(234, 141, 184);"> the time is?</button>
+
+<script>
+    let text1 = "A";
+    let text2 = "B";
+    let text11=  "hello";
+    let text22 = "We are the so-called \\\"Vikings\" from the north.";
+    text11+="world";
+    let text111=new String("hello");
+    console.log(typeof(text11)+" "+typeof(text111));
+    let result = text1 < text2;
+    console.log(text11.length);
+    console.log(text22);
+    document.getElementById("demo").innerHTML = "Is A less than B? " + result+"<br> assignment op: "+ text11 ;
+    let a=3 , b=6, c=5, d=8;
+    let res1=(b%a)+c*d**c-b/c; 
+    let power=Math.pow(c,a);
+    b-=a;
+    document.getElementById("demo1").innerHTML="res1 ="+res1 +"<br>" + "a++ = "+ a++ +"<br>"+"power =  "+ power
+    +"<br>"+b;
+    let x = -100;
+    x >>= 5;
+    let y=100;
+    y<<=5;
+
+    document.getElementById("demo2").innerHTML = "Value of x is: " + x+"<br>"+"Value of y is: " + y;  
+    let bool=true;
+    let car;
+    let carss=" ";
+    console.log(typeof(bool)+" "+typeof(car)+" "+typeof(y)+" "+typeof(carss));
+    let w = 123e5;
+    let z = 123e-5;
+    let ww=123e5;
+    let bigint = BigInt("123456789012345678901234567890");
+     document.getElementById("demo3").innerHTML = w + "<br>" + z+ "<br>" + bigint+ "<br>" + (w==ww)+ "<br>" + (ww==z);
+    const cars=["maruthi","swift","BMW"];
+    const person1={
+        fname:"sri",
+        lname:"devi",
+        age:22,
+        fullname : function(){
+            return this.fname+" "+this.lname;
+        }
+    };
+    person1.gender='female';
+    delete person1.lname
+    document.getElementById("demo4").innerHTML=cars[0]+
+    "<br>" + person1.fname  +/*" "+person1.lname+*/"  is "+person1.age+"years old."+'-'+person1.gender;
+    function to_celsius(f){
+        return (5/9)* (f-32);
+    }
+    let value1=to_celsius(100);
+    let value2=to_celsius();
+    document.getElementById("demo5").innerHTML=value1
+    +"<br>"+value2 +"<br>"+to_celsius;
+
+    function exam(){
+        let val=10;
+        if(false){
+           val=15;
+        }
+        else{
+            val=5;
+        }
+        console.log(val)
+    }
+    exam();
+   // const person2={};
+    const person2=new Object();
+    person2.name="ramu";
+    person2.age=3;
+    let ff="name";
+    const copy=person2;
+    copy.age=4;
+    document.getElementById("demo9").innerHTML=Object.values(person2);
+    document.getElementById("demo6").innerHTML=
+    "This is my pet "+person2[ff]+ ", it is "+person2.age+" years old.";
+const myObj = {
+  name: "John",
+  age: 30,
+ /* myCars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "swift"
+  },
+  drive:function(){
+    return this.name+" is driving ";
+  }*/
+}
+let textc = "";
+for (let x in myObj) {
+  textc += myObj[x] + " ";
+};
+//document.getElementById("demo7").innerHTML =  myObj.drive().toUpperCase()+myObj.myCars["car2"]+" CAR";
+document.getElementById("demo8").innerHTML=textc;
+const fruits={Apple:300,Orange:200,pomogranate:150};
+let text="";
+for (let [fruit,amt] of Object.entries(fruits))
+{
+    text+=fruit+":"+amt+"<br>";
+}
+document.getElementById("demo10").innerHTML=text;
+//document.getElementById("demo11").innerHTML = JSON.stringify(fruits);
+// Display JSON document.getElementById("demo13").innerHTML = JSON.stringify(person3);
+function Person(first,last,age){
+this.fname=first;
+this.lname=last;
+this.age=age;
+/*this.fullname=function(){
+    return this.fname+" "+this.lname;
+};*/
+//this.mothertongue="kannada";
+}
+const father= new Person("Suresh","B K",45);
+const Mother=new Person("Sunitha","T",39);
+//father.mothertongue="kannada";
+Person.prototype.mothertongue="kannada";
+Person.prototype.fullname=function(){
+    return this.fname+" "+this.lname;};
+document.getElementById("demo11").innerHTML="My father name-"+father.fullname();//father.fname+" "+father.lname+" Language- "+father.mothertongue
++"<br> My Mother name-"+" "+Mother.fname+" "+Mother.lname+" Language- "+Mother.mothertongue;
+
+let s1="Sri";
+let s2=new String("Sri");
+let s3=new String("Sri");
+console.log(s1.indexOf('r'));
+console.log(s1==s2);
+console.log(s1===s2);
+console.log(s2==s3);
+console.log(s2===s3);
+let str="Hello World";
+console.log(str.length);
+console.log(str.charAt(12));
+console.log(str.charAt(3));
+console.log(str.at(-3));
+console.log(str.charCodeAt(0));
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.slice(5));//,11));
+console.log(str.slice(-5,-1));
+console.log(str.substr(2,6));
+console.log(str.substr(7));
+let strc=str.concat("    ",s1,"   ");
+console.log(strc);
+console.log(strc.length);
+console.log(strc.trimEnd().length);
+console.log(s1.padStart(5,"0"));
+console.log(s1.padEnd(7,"0"));
+let num=22;
+console.log(num.toString().length);
+console.log(s1.repeat(3));
+console.log(s1.replace("Sri","ramu"));
+let str1="Hello World Hello World Hello World";
+console.log(str1.replaceAll( "World","ramu"));
+const ar=str1.split("o");
+console.log(ar[1]);
+//search methods
+console.log(str);
+console.log(str.indexOf('l',3));
+console.log(str.lastIndexOf('l'));
+console.log(str.startsWith(" "));
+console.log(str.startsWith('He'));
+console.log(str.search("lo"));
+console.log(str.match("lo"));
+/*const iterator = text.matchAll("Hello");
+document.getElementById("demo14").innerHTML = Array.from(iterator);*/
+console.log(str1.includes("orl"));
+console.log(str1.includes("orl",3));//start position
+console.log(str.endsWith("world"));
+console.log(str.endsWith("World"));
+console.log(str.endsWith("World",11));//1st 11 chars
+let s4 = `He's often called "Johnny"`;
+let res2 = `Welcome ${str}, ${s1}!`;
+document.getElementById("demo13").innerHTML =s4+" "+res2;
+let n1=10;
+let n2=10;
+console.log(`the total sum is ${n1+n2}`);
+let header = "Template Strings";
+let tags = ["template strings", "javascript", "es6"];
+
+let html = `<h2>${header}</h2><ul>`;
+
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+
+html += `</ul>`;
+document.getElementById("demo14").innerHTML = html;
+let x1 = 999999999999999;
+let y1 = 9999999999999999;
+let x11 = 100 / "Apple";
+let y11 = 100 / "10";
+let z11 = 100 / "Apple";
+let x111=NaN;
+console.log(isNaN(z11));
+document.getElementById("demo15").innerHTML = x1 + "<br>" + y1+ "<br>" + x11+ "<br>" + y11;
+let x2= "100";
+let y2 = "10";
+console.log(x2.at(3));
+let z2= x2 / y2;
+let z22= x2 + y2;//this will not add but concate.
+console.log(x111+x1);
+console.log(x111+x2);
+console.log(z2);
+console.log(z22);
+console.log(typeof NaN);
+console.log(typeof Infinity);
+</script>
+    </body>
+   
+</html>
