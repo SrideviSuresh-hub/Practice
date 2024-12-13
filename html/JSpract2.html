@@ -27,6 +27,21 @@
     <p id="demo13"></p><br>
     <p id="demo14"></p><br>
     <p id="demo15"></p><br>
+    <p id="demo16"></p><br>
+    <p id="demo17"></p><br>
+    <p id="demo18"></p><br>
+    <p id="demo19"></p><br>
+    <p id="demo20"></p><br>
+    <p id="demo21"></p><br>
+    <p id="demo22"></p><br>
+    <p id="demo23"></p><br>
+    <p id="demo24"></p><br>
+    <p id="demo25"></p><br>
+    <p id="demo26"></p><br>
+    <p id="demo27"></p><br>
+    <p id="demo28"></p><br>
+
+
     
     <br>
     <button onclick="document.getElementById('demo12').innerHTML=Date()" style="background-color: aqua;"> the time is?</button>
@@ -238,6 +253,194 @@ console.log(z2);
 console.log(z22);
 console.log(typeof NaN);
 console.log(typeof Infinity);
+let n=500;
+
+while(n!=Infinity)
+{
+    n*=n;
+    console.log(n);
+}
+console.log(typeof Infinity );
+console.log(100/0);
+console.log(0xFF);
+let n3=500;
+let n4 = new Number(500);
+let n5 = new Number(500);
+console.log(n3==n4);
+console.log(n3===n4);
+console.log(n5==n4);
+console.log(n5===n4);
+let n6 = 123456789012345678901234567890n;
+let n7 = BigInt("123456789012345678901234567890");
+let n8 = 5n;
+let n9 = Number(n8) / 2;
+let n10 = 9007199254740992 === 9007199254740993;
+document.getElementById("demo16").innerHTML = n6 + "<br>" + n7 + "<br>" + n9+ "<br>" + n10;
+console.log(n10);
+let hex = 0x20000000000003n;
+let oct = 0o400000000000000003n;
+let bin = 0b100000000000000000000000000000000000000000000000000011n;
+console.log(hex);
+console.log(oct);
+console.log(bin);
+let xy = 9.656;
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
+document.getElementById("demo17").innerHTML=Number.isInteger(10)+"<br>"+Number.isInteger(10.9)+"<br>"+
+Number.isSafeInteger(9007199254740992)+"<br>"+Number.isSafeInteger(13456789)+"<br>"+
+Number(true)+"<br>"+Number("10  ")+"<br>"+Number("10.33")+"<br>"+Number("10,4")+"<br>"+Number("John")+"<br>"+Number(new Date("1970-01-01"))+"<br>"+Number(new Date("1970-01-02"))+  parseInt("-10") + "<br>" +
+  parseInt("-10.33") + "<br>" +
+  parseInt("10") + "<br>" +
+  parseInt("10.33") + "<br>" +
+  parseInt("10 6") + "<br>" +  
+  parseInt("10 years") + "<br>" +  
+  parseInt("years 10")+ "<br>" +
+  parseFloat("10.33")+ "<br>" +
+  Number.EPSILON + "<br>" +
+  Number.MAX_VALUE+ "<br>" +
+  Number.MIN_VALUE+ "<br>" +
+  xy.MAX_VALUE+ "<br>" +
+  Number.POSITIVE_INFINITY+ "<br>" +
+  Number.NEGATIVE_INFINITY+ "<br>" +
+  (-1/0)+ "<br>" +(1/0)+ "<br>" +
+  Number.NaN;  
+document.getElementById("demo18").innerHTML =n1.toString() + "<br>" +
+   (123).toString() + "<br>"  +
+   (100 + 23).toString()+"<br>"  +
+  xy.toExponential() + "<br>" + 
+  xy.toExponential(4) + "<br>" + 
+  xy.toExponential(6) + "<br>" + 
+  xy.toFixed(2) + "<br>" + 
+  xy.toFixed(6) + "<br>"+
+  xy.toPrecision(2) + "<br>"+
+  xy.toFixed(5) + "<br>";
+const colors=["green","blue","red",22];
+const shapes=[];
+shapes[0]="triangle";
+shapes[1]="square";
+shapes[2]="cicle";
+colors[0]="pink";
+let texta="<ul>";
+    for(let i=0;i<=colors.length-1;i++){
+        texta+="<li>"+colors[i]+"</li>";
+    }
+    texta+="</ul>";
+const arr=new Array(1,2,7,3,4,5);
+const arr1=new Array(40);
+const arr2=arr.flatMap(x => [x,x*10]);
+    document.getElementById("demo19").innerHTML=colors+"<br>"+shapes.toString()+"<br>"+colors.length+"<br>"+shapes.sort()+"<br>"+colors[0]+"<br>"+texta+"<br>"+
+    typeof colors+"<br>"+arr1+"<br>"+arr+"<br>"+arr1[0]+"<br>"+arr[0]+"<br>"+Array.isArray(colors)+"<br>"+(colors instanceof Array);
+document.getElementById("demo20").innerHTML=colors.at(2)+"<br>"+shapes.join("*")+"<br>"+colors.pop()+"<br>"+colors.push("green")+"<br>"+
+shapes.shift()+"<br>"+colors+"<br>"+colors.push("black")+"<br>"+colors+"<br>"+shapes;
+colors[2]="orange";
+delete shapes[1];
+document.getElementById("demo21").innerHTML=colors+"<br>"+shapes+"<br>"+colors.concat(shapes)+"<br>"+colors.concat(shapes,arr)+"<br>"+
+colors.copyWithin(1,3)+"<br>"+colors.copyWithin(1,2,4)+"<br>"+arr2+"<br>"+colors.slice(2,5)+"<br>"+colors.slice(3);
+//colors.toSpliced(1,0,"white","gery");
+//console.log(colors);
+colors.splice(1,0,"white","gery");
+console.log(colors);
+colors.splice(3,1);
+console.log(colors);
+let first=arr.find(myFunction);
+function myFunction(value, index, array) {
+  return value > 3;
+};
+const array=[20,30,50,40,10];
+let find=array.find(x => x>10);
+let findlast=array.findLast(x => x>10);
+let findindex=array.findIndex(x => x>20);
+
+
+document.getElementById("demo22").innerHTML=colors+"<br>"+
+colors.indexOf("green")+"<br>"+colors.lastIndexOf("green")+"<br>"+
+colors.includes("app")+"<br>"+first+"<br>"+find+"<br>"+findlast+"<br>"+
+findindex+"<br>"+array.toReversed()+"<br>"+array.reverse()+"<br>"+ array.sort(function(a,b){
+    return a-b})+"<br>"+array[0]+"<br>"+array.sort(function(a,b){
+        return b-a})+"<br>"+array[0]+"<br>"+array.sort(function(a,b){return 0.5-Math.random()})+"<br>"+
+        Math.max.apply(null, arr)+"<br"+Math.min.apply(null, arr);
+      /*  let len=arr.length;
+        function maxfunc(arr){
+            let max=Infinity;
+            while(len--){
+                if(arr[len]>max)
+            {
+                max=arr[len]
+            }
+            }
+            return max;
+        }*/
+        const carsss = [
+            {type:"Volvo", year:2016},
+            {type:"Saab", year:2001},
+            {type:"BMW", year:2010}
+        ];
+        console.log(carsss.sort(function(a, b){return a.year - b.year}));
+        const exam1=[33,25,61,35,83,26];
+        let ex="";
+        exam1.forEach(my_func1);
+        function my_func1(value,index,array){//(value)
+            ex+=value*2+"<br>";
+        }
+        const exam2=exam1.map(my_func2);
+        function my_func2(value ,index,array){
+            return value*2;
+        }
+        const exam3=exam1.flatMap((x)=>[x,x*2]);
+        function my_func3(value,index,array){
+            return value>40;
+        }
+        const exam4=exam1.filter(my_func3);
+        const numbers = [45, 4, 9, 16, 25];
+        let sum = numbers.reduce(my_func4,100);
+        let sum1 = numbers.reduceRight(my_func4);
+        function my_func4(total, value) {
+            return total + value;
+            }
+        let exam5=numbers.every(my_func5);
+        let exam6=numbers.some(my_func5);
+            function my_func5(value,index,array){
+                return value>18;
+            }
+            console.log(Array.from("ABCDEFG"));
+            const keys=colors.keys();
+            const entries=colors.entries();
+            let key="";
+            for(let x of keys){
+                key+=x+"<br>";
+            }
+            let entry="";
+            for(let x of entries)
+            {
+                entry+=x+"<br>";
+            }
+            const withup=colors.with(4,"brown");
+            const sam=[...colors,...shapes,...numbers];
+            document.getElementById("demo23").innerHTML=ex+"<br>"+exam1+"<br>"+exam2+"<br>"+exam3+"<br>"+exam4+"<br>"+sum+"<br>"+sum1+
+            "<br>"+exam5+"<br>"+exam6+"<br>"+key+"<br>"+entry+"<br>"+withup+"<br>"+sam;
+            const d1=new Date();
+            const d2=new Date("2002-11-15");
+            const d3=new Date("november 13,2023 11:20:05");
+            const d4=new Date(2003,3); 
+            const d5=new Date(2010,11,17);
+            const d6=new Date(1982,8,17);
+            const d7=new Date(2005,6,25,6,34,5);
+            const d8=new Date(2001,1,3,4,20,5,34);
+            const d9=new Date(2010,21,17);
+            const d10=new Date(2003,10,33);
+            const d11=new Date(2024);
+            const d12=new Date(82,8,17);
+            const d13=new Date(-234566778);
+            const d14=new Date("2015-03-25T12:00:00Z");
+            const d15=new Date(60*30*3*500);
+            const d16=new Date("2019");
+            const d17=Date.parse("03/25/2015");
+            const d18=new Date(1427221800000);
+            const d19=new Date("03/25/2015");
+            document.getElementById("demo24").innerHTML=d1+"<br>"+d3+"<br>"+d4+"<br>"+d5+"<br>"+d6+"<br>"+d7+"<br>"+d8+"<br>"+d9+"<br>"+d10+"<br>"+d11+"<br>"+d12+"<br>"+d13+"<br>"+d14+"<br>"+d15+
+            "<br>"+d1.toString()+"<br>"+d1.toDateString()+"<br>"+d1.toUTCString()+"<br>"+d17+"<br>"+d18+"<br>"+d19;
+            document.getElementById("demo25").innerHTML=d1.getDate()+"<br>"+d2.getDay()+"<br>"+d3.getFullYear()+"<br>"+d4.getHours()+"<br>"+d5.getMinutes()+"<br>"+d6.getMonth()+"<br>"+
+            d7.getSeconds()+"<br>"+d8.getMilliseconds()+d1.getTimezoneOffset();
 </script>
     </body>
    

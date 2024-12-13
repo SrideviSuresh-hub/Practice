@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://127.0.0.1:5500/html/JSpract2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      // document.addEventListener("DOMContentLoaded", function() { });
+        </script>
+</head>
+<body>
+
+    <h1>  Operators</h1>
+    <p id="demo">Is A less than B? true<br> assignment op: helloworld</p>
+    <p id="demo1">res1 =163838.8<br>a++ = 3<br>power =  125<br>3</p>
+    <p id="demo2">Value of x is: -4<br>Value of y is: 3200</p>
+    <p id="demo3">12300000<br>0.00123<br>123456789012345678901234567890<br>true<br>false</p>
+    <p id="demo4">maruthi<br>sri  is 22years old.-female</p><br>
+    <p id="demo5">37.77777777777778<br>NaN<br>function to_celsius(f){
+        return (5/9)* (f-32);
+    }</p><br>
+    <p id="demo6">This is my pet ramu, it is 4 years old.</p><br>
+    <p id="demo7"></p><br>
+    <p id="demo8">John 30 </p><br>
+    <p id="demo9">ramu,4</p><br>
+    <p id="demo10">Apple:300<br>Orange:200<br>pomogranate:150<br></p><br>
+    <p id="demo11">My father name-Suresh B K</p><br>
+    <p id="demo12"></p><br>
+    <p id="demo13">He's often called "Johnny" Welcome Hello World, Sri!</p><br>
+    <p id="demo14"><h2>Template Strings</h2><ul><li>template strings</li><li>javascript</li><li>es6</li></ul></p><br>
+    <p id="demo15">999999999999999<br>10000000000000000<br>NaN<br>10</p><br>
+    <p id="demo16">123456789012345678901234567890<br>123456789012345678901234567890<br>2.5</p><br>
+    <p id="demo17"></p><br>
+    <p id="demo18"></p><br>
+    <p id="demo19"></p><br>
+    <p id="demo20"></p><br>
+    
+    <br>
+    <button onclick="document.getElementById(&#39;demo12&#39;).innerHTML=Date()" style="background-color: aqua;"> the time is?</button>
+    <button onclick="this.innerHTML=Date()" style="background-color: rgb(129, 211, 106);"> the time is?</button>
+    <button onclick="displayDate()" style="background-color: rgb(234, 141, 184);"> the time is?</button>
+
+<script>
+    let text1 = "A";
+    let text2 = "B";
+    let text11=  "hello";
+    let text22 = "We are the so-called \\\"Vikings\" from the north.";
+    text11+="world";
+    let text111=new String("hello");
+    console.log(typeof(text11)+" "+typeof(text111));
+    let result = text1 < text2;
+    console.log(text11.length);
+    console.log(text22);
+    document.getElementById("demo").innerHTML = "Is A less than B? " + result+"<br> assignment op: "+ text11 ;
+    let a=3 , b=6, c=5, d=8;
+    let res1=(b%a)+c*d**c-b/c; 
+    let power=Math.pow(c,a);
+    b-=a;
+    document.getElementById("demo1").innerHTML="res1 ="+res1 +"<br>" + "a++ = "+ a++ +"<br>"+"power =  "+ power
+    +"<br>"+b;
+    let x = -100;
+    x >>= 5;
+    let y=100;
+    y<<=5;
+
+    document.getElementById("demo2").innerHTML = "Value of x is: " + x+"<br>"+"Value of y is: " + y;  
+    let bool=true;
+    let car;
+    let carss=" ";
+    console.log(typeof(bool)+" "+typeof(car)+" "+typeof(y)+" "+typeof(carss));
+    let w = 123e5;
+    let z = 123e-5;
+    let ww=123e5;
+    let bigint = BigInt("123456789012345678901234567890");
+     document.getElementById("demo3").innerHTML = w + "<br>" + z+ "<br>" + bigint+ "<br>" + (w==ww)+ "<br>" + (ww==z);
+    const cars=["maruthi","swift","BMW"];
+    const person1={
+        fname:"sri",
+        lname:"devi",
+        age:22,
+        fullname : function(){
+            return this.fname+" "+this.lname;
+        }
+    };
+    person1.gender='female';
+    delete person1.lname
+    document.getElementById("demo4").innerHTML=cars[0]+
+    "<br>" + person1.fname  +/*" "+person1.lname+*/"  is "+person1.age+"years old."+'-'+person1.gender;
+    function to_celsius(f){
+        return (5/9)* (f-32);
+    }
+    let value1=to_celsius(100);
+    let value2=to_celsius();
+    document.getElementById("demo5").innerHTML=value1
+    +"<br>"+value2 +"<br>"+to_celsius;
+
+    function exam(){
+        let val=10;
+        if(false){
+           val=15;
+        }
+        else{
+            val=5;
+        }
+        console.log(val)
+    }
+    exam();
+   // const person2={};
+    const person2=new Object();
+    person2.name="ramu";
+    person2.age=3;
+    let ff="name";
+    const copy=person2;
+    copy.age=4;
+    document.getElementById("demo9").innerHTML=Object.values(person2);
+    document.getElementById("demo6").innerHTML=
+    "This is my pet "+person2[ff]+ ", it is "+person2.age+" years old.";
+const myObj = {
+  name: "John",
+  age: 30,
+ /* myCars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "swift"
+  },
+  drive:function(){
+    return this.name+" is driving ";
+  }*/
+}
+let textc = "";
+for (let x in myObj) {
+  textc += myObj[x] + " ";
+};
+//document.getElementById("demo7").innerHTML =  myObj.drive().toUpperCase()+myObj.myCars["car2"]+" CAR";
+document.getElementById("demo8").innerHTML=textc;
+const fruits={Apple:300,Orange:200,pomogranate:150};
+let text="";
+for (let [fruit,amt] of Object.entries(fruits))
+{
+    text+=fruit+":"+amt+"<br>";
+}
+document.getElementById("demo10").innerHTML=text;
+//document.getElementById("demo11").innerHTML = JSON.stringify(fruits);
+// Display JSON document.getElementById("demo13").innerHTML = JSON.stringify(person3);
+function Person(first,last,age){
+this.fname=first;
+this.lname=last;
+this.age=age;
+/*this.fullname=function(){
+    return this.fname+" "+this.lname;
+};*/
+//this.mothertongue="kannada";
+}
+const father= new Person("Suresh","B K",45);
+const Mother=new Person("Sunitha","T",39);
+//father.mothertongue="kannada";
+Person.prototype.mothertongue="kannada";
+Person.prototype.fullname=function(){
+    return this.fname+" "+this.lname;};
+document.getElementById("demo11").innerHTML="My father name-"+father.fullname();//father.fname+" "+father.lname+" Language- "+father.mothertongue
++"<br> My Mother name-"+" "+Mother.fname+" "+Mother.lname+" Language- "+Mother.mothertongue;
+
+let s1="Sri";
+let s2=new String("Sri");
+let s3=new String("Sri");
+console.log(s1.indexOf('r'));
+console.log(s1==s2);
+console.log(s1===s2);
+console.log(s2==s3);
+console.log(s2===s3);
+let str="Hello World";
+console.log(str.length);
+console.log(str.charAt(12));
+console.log(str.charAt(3));
+console.log(str.at(-3));
+console.log(str.charCodeAt(0));
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.slice(5));//,11));
+console.log(str.slice(-5,-1));
+console.log(str.substr(2,6));
+console.log(str.substr(7));
+let strc=str.concat("    ",s1,"   ");
+console.log(strc);
+console.log(strc.length);
+console.log(strc.trimEnd().length);
+console.log(s1.padStart(5,"0"));
+console.log(s1.padEnd(7,"0"));
+let num=22;
+console.log(num.toString().length);
+console.log(s1.repeat(3));
+console.log(s1.replace("Sri","ramu"));
+let str1="Hello World Hello World Hello World";
+console.log(str1.replaceAll( "World","ramu"));
+const ar=str1.split("o");
+console.log(ar[1]);
+//search methods
+console.log(str);
+console.log(str.indexOf('l',3));
+console.log(str.lastIndexOf('l'));
+console.log(str.startsWith(" "));
+console.log(str.startsWith('He'));
+console.log(str.search("lo"));
+console.log(str.match("lo"));
+/*const iterator = text.matchAll("Hello");
+document.getElementById("demo14").innerHTML = Array.from(iterator);*/
+console.log(str1.includes("orl"));
+console.log(str1.includes("orl",3));//start position
+console.log(str.endsWith("world"));
+console.log(str.endsWith("World"));
+console.log(str.endsWith("World",11));//1st 11 chars
+let s4 = `He's often called "Johnny"`;
+let res2 = `Welcome ${str}, ${s1}!`;
+document.getElementById("demo13").innerHTML =s4+" "+res2;
+let n1=10;
+let n2=10;
+console.log(`the total sum is ${n1+n2}`);
+let header = "Template Strings";
+let tags = ["template strings", "javascript", "es6"];
+
+let html = `<h2>${header}</h2><ul>`;
+
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+
+html += `</ul>`;
+document.getElementById("demo14").innerHTML = html;
+let x1 = 999999999999999;
+let y1 = 9999999999999999;
+let x11 = 100 / "Apple";
+let y11 = 100 / "10";
+let z11 = 100 / "Apple";
+let x111=NaN;
+console.log(isNaN(z11));
+document.getElementById("demo15").innerHTML = x1 + "<br>" + y1+ "<br>" + x11+ "<br>" + y11;
+let x2= "100";
+let y2 = "10";
+console.log(x2.at(3));
+let z2= x2 / y2;
+let z22= x2 + y2;//this will not add but concate.
+console.log(x111+x1);
+console.log(x111+x2);
+console.log(z2);
+console.log(z22);
+console.log(typeof NaN);
+console.log(typeof Infinity);
+let n=500;
+
+while(n!=Infinity)
+{
+    n*=n;
+    console.log(n);
+}
+console.log(typeof Infinity );
+console.log(100/0);
+console.log(0xFF);
+let n3=500;
+let n4 = new Number(500);
+let n5 = new Number(500);
+console.log(n3==n4);
+console.log(n3===n4);
+console.log(n5==n4);
+console.log(n5===n4);
+let n6 = 123456789012345678901234567890n;
+let n7 = BigInt("123456789012345678901234567890");
+let n8 = 5n;
+let n9 = Number(n8) / 2;
+document.getElementById("demo16").innerHTML = n6 + "<br>" + n7 + "<br>" + n9;
+</script>
+
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+   
+</body></html>
