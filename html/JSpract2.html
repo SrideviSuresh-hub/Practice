@@ -437,11 +437,145 @@ findindex+"<br>"+array.toReversed()+"<br>"+array.reverse()+"<br>"+ array.sort(fu
             const d17=Date.parse("03/25/2015");
             const d18=new Date(1427221800000);
             const d19=new Date("03/25/2015");
-            document.getElementById("demo24").innerHTML=d1+"<br>"+d3+"<br>"+d4+"<br>"+d5+"<br>"+d6+"<br>"+d7+"<br>"+d8+"<br>"+d9+"<br>"+d10+"<br>"+d11+"<br>"+d12+"<br>"+d13+"<br>"+d14+"<br>"+d15+
+            const d20=new Date();
+          
+            document.getElementById("demo24").innerHTML=d1+"<br>"+d3+"<br>"+d4+"<br>"+d5+"<br>"+d6+"<br>"+d7+"<br>"+
+            d8+"<br>"+d9+"<br>"+d10+"<br>"+d11+"<br>"+d12+"<br>"+d13+"<br>"+d14+"<br>"+d15+
             "<br>"+d1.toString()+"<br>"+d1.toDateString()+"<br>"+d1.toUTCString()+"<br>"+d17+"<br>"+d18+"<br>"+d19;
             document.getElementById("demo25").innerHTML=d1.getDate()+"<br>"+d2.getDay()+"<br>"+d3.getFullYear()+"<br>"+d4.getHours()+"<br>"+d5.getMinutes()+"<br>"+d6.getMonth()+"<br>"+
             d7.getSeconds()+"<br>"+d8.getMilliseconds()+d1.getTimezoneOffset();
-</script>
-    </body>
-   
+            console.log(Math.E);
+            console.log(Math.PI);
+            console.log(Math.SQRT1_2);
+            console.log(Math.SQRT2);
+            console.log(Math.LN2);
+            console.log(Math.LN10);
+            console.log(Math.LOG2E);
+            console.log(Math.LOG10E);
+            console.log(Math.round(8.69));
+            console.log(Math.ceil(4.4));
+            console.log(Math.ceil(-4.4));
+            console.log(Math.floor(4.4));
+            console.log(Math.trunc(4.4));
+            console.log(Math.round(4.4));
+            console.log(Math.pow(8,3));
+            console.log(Math.sqrt(64));
+            console.log(Math.abs(-9.6));
+            console.log(Math.abs(0));
+            console.log(Math.sin(90 * Math.PI/180));
+            console.log(Math.sin(0 * Math.PI/180));
+            console.log(Math.min(45,76,23,87));
+            console.log(Math.max(45,76,23,87));
+            console.log(Math.random());
+            console.log(Math.log(4));
+            console.log(Math.log2(8));
+            console.log(Math.tan(45* Math.PI/180));
+            console.log(Math.log10(40));
+            console.log(Math.floor(Math.random() * 10));
+            console.log(Math.floor(Math.random() * 11) );//floor(Math.random() * 10)+1
+            console.log(Math.floor(Math.random() * 100) );//floor(Math.random() * 100)+1
+            console.log(Boolean(10>9));
+            console.log(10>9);
+            console.log(Boolean("hello"));
+            console.log(Boolean(100));
+            console.log(Boolean(-20));
+            console.log(Boolean("false"));
+            console.log(Boolean(1+2.5-35));
+            console.log(0);
+           
+            console.log(Boolean(""));
+            let fa;
+            console.log(fa);
+            console.log(Boolean(null));
+            console.log(true);
+            console.log(Boolean(10 / "Hallo"));
+            let bo1 = false;
+            let bo2= new Boolean(false);
+            let bo3= new Boolean(false);
+            console.log(bo1==bo2);
+            console.log(bo1===bo2);
+            console.log(bo2==bo3);
+            console.log(bo1===bo3);
+            let age=5;
+            let vote=(age<18)? "u can't":"u can";
+            console.log(vote);
+            console.log(2<12);
+            console.log(2<"12");
+            console.log(2<"joo");
+            console.log(2>"joo");
+            console.log("2"=="10");
+            console.log("2">"12");
+
+            const time1=new Date().getHours();
+            let greeting;
+            if (time1 < 10) {
+                greeting = "Good morning";
+                } else  {
+                 greeting = "Good day";
+                } 
+                console.log(greeting);
+               if (time1 < 10) {
+                greeting = "Good morning";
+                } else if (20) {
+                greeting = "Good day";
+                } else {
+                greeting = "Good evening";
+                }
+                console.log(greeting);
+                let day;
+                switch(new Date().getDay())
+                {
+                    case 0:
+                        day="Sunday";
+                        break;
+                    case 1:
+                        day="Monday";
+                        break;
+                    case 2:
+                        day="Tuesday";
+                        break;
+                    case 3:
+                        day="Wednesday";
+                        break;
+                    case 4:
+                        day="Thursday";
+                        break;
+                    case 5:
+                        day="Friday";
+                        break;
+                    case 6:
+                        day="Saturday";
+                        break;
+                    default:
+                        break;
+                        
+                    }
+                    console.log(day);
+                let i=0;
+                for(;i<cars.length;)
+                {
+                    console.log(cars[i]);
+                    i++;
+                }
+                //for(key in Objects){}
+                let=forin="";
+                for(let x in cars)
+                {
+                    forin+=cars[x]+" ";
+                }
+                const a1=[34,6,98,122,78];
+                let a11="";
+                a1.forEach(func1);
+                function func1(value,index,array){
+                    a11+=value;
+                }
+                a11+="<br>";
+                for(let x of cars){
+                    a11+=cars[x];
+                }
+                document.getElementById("demo26").innerHTML=forin+"<br>"+a11;
+          
+           
+           </script>
+    </body>  
 </html>

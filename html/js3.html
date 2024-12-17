@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p><br>
+    <p id="demo1"></p><br>
+    <p id="demo2"></p><br>
+    <p id="demo3"></p><br>
+ name: <input type="text" id="fname" onchange="upperCase()">
+<p> a function transforms the input to upper case.</p>
+<input type="button" value="Load new document" onclick="newDoc()">
+<br>
+<input type="button" value="goback" onclick="goBack()">
+<br>
+<input type="button" value="goForward" onclick="goForward()">
+<br>
+<input type="button"  value="alert" onclick="alertFunc()">
+<br>
+<input type="button"  value="confirm" onclick="confirmFunc()">
+<br>
+<input type="button"  value="prompt" onclick="promptFunc()">
+<br>
+<button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
+<br>
+<button onclick="clearTimeout(myVar)">Stop it</button>
+<br>
+<button onclick="clearInterval(mytime)"> stop time</button>
+<br><button onclick="getLocation()">Try It</button>
+
+
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+
+hello(bye);
+function hello(callback){
+    console.log("hello");
+    callback();
+}
+function bye(){
+    console.log("good byee");
+
+}
+setTimeout(()=> console.log("task1"),3000);
+console.log("task2");
+console.log("task3");
+console.log("task4");
+func1(func2)
+function func1(callback){
+    setTimeout(() =>{console.log("task1");
+        callback()},3000);
+
+}
+function func2(){
+    console.log("task2");
+    console.log("task3");
+    console.log("task4");
+}
+
+function walkDog(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            const dogwalked=true;
+            if(dogwalked){
+                resolve("you walk the ramu");
+            }
+            else{
+                reject("u didnt walk the ramu");
+            }
+        },1500);
+    });
+}
+function clean(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            const cleaned=true;
+            if(cleaned){
+                resolve("u cleaned the kitchen");
+            }
+            else{
+                reject("u didnt cleaned the kitchen");
+            }
+        },2000 );
+    });
+}
+function  trashOut(){
+
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            const trashout=true;
+            if(trashout){
+                resolve("U take out trash");
+            }
+            else{
+                reject("u didnt take out trash");
+            }
+        },500 );
+    });
+}
+/*walkDog().then(value => {console.log(value); return clean()})
+        .then(value => {console.log(value); return trashOut()})
+        .then(value => {console.log(value); console.log("u have finished all the chores")})
+        .catch(error => console.error(error));*/
+    async function doChores(){
+        try{
+            const walkdogres=await walkDog();
+            const cleanres=await clean();
+            const trashoutres=await trashOut();
+             console.log(walkdogres);
+            console.log(cleanres);
+            console.log(trashoutres);
+        }
+        catch(error){
+            console.log(error);
+        }
+    }
+    doChores();
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+    console.log(screen.width);
+    console.log(screen.height);
+    console.log(screen.availWidth);
+    console.log(screen.availHeight); 
+    console.log(screen.colorDepth);
+    console.log(screen.pixelDepth);
+    console.log(location.href);
+    console.log(location.pathname);
+
+    console.log(location.hostname);
+
+    console.log(location.protocol);
+
+    console.log(location.port);
+    function newDoc() {
+  window.location.assign("https://www.w3schools.com")
+
+}
+function goBack(){
+    window.history.back();
+}
+function goForward(){
+    window.history.forward();
+}
+console.log(navigator.cookieEnabled);
+console.log(navigator.appName);
+console.log(navigator.appCodeName);
+console.log(navigator.appVersion);
+console.log(navigator.platform);//
+console.log(navigator.product);//
+console.log(navigator.userAgent);
+console.log(navigator.language);
+console.log(navigator.onLine);
+console.log(navigator.javaEnabled());
+
+function alertFunc() {
+  alert("I am an alert box!");
+  alert("hii\n how r u");
+}
+confirm("i need to confirm");
+function promptFunc() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+function myFunction() {
+  alert("Hello");
+}
+ let doc=document.getElementById("demo1")
+let mytime=setInterval(Timer,1000);
+function Timer(){
+    const d=new Date();
+doc.innerHTML=d.toLocaleTimeString()+"<br>";
+}
+
+
+const person={
+    fullname:function(city,country){
+        return this.fname+" "+this.lname+" "+city+" "+country; 
+    }
+   /* fullname: function(){
+        return this.fname+" "+this.lname;
+    }*/
+}
+const person1={
+    fname:"sri",
+    lname:"devi"
+}
+console.log(person.fullname.call(person1,'blore','india'));
+console.log(person.fullname.apply(person1,['cbpur','india']));
+const person2= {
+  firstName:"John",
+  lastName: "Doe",
+  display: function () {
+    let x = document.getElementById("demo2");
+    x.innerHTML = this.firstName + " " + this.lastName;
+  }
+}
+
+let display = person2.display.bind(person2);
+setTimeout(display, 3000);
+const locweb=document.getElementById("demo3");
+            function showPostion(position){
+                locweb.innerHTML=position.coords.latitude+" "+position.coords.longitude;
+            }
+            function getLocation(){
+               try{
+                navigator.geolocation.getCurrentPosition(showPostion);
+            
+            }catch{
+                locweb.innerHTML=err;
+            }
+        }
+           
+</script>
+</body>
+</html>

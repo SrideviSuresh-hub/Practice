@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <br><br>
+    <p id="demo1"></p>
+    <script>
+        const txt='{"fname":"sri","lname":"devi","age":"function(){ return 22;}","birth":"2002-11-13"}'
+        const obj=JSON.parse(txt);
+        console.log(txt);
+        console.log(obj);
+        const arr1='["maruthi","swift","audi"]';
+        const myarr=JSON.parse(arr1);
+        console.log(myarr[0]);
+        let arrtext="";
+        for( let x in arr1){
+            arrtext+=arr1[x];
+        }
+        obj.birth=new Date(obj.birth);
+        document.getElementById("demo1").innerHTML=arrtext;
+        const obj1=JSON.parse(txt,function(key,value){
+            if(key=="birth")
+            {
+                return new Date(value);
+            }
+            else
+            {
+                return value;
+            }
+        });
+        let text="";
+       for(let y in obj){
+        text+=obj[y]+",";
+       }
+
+
+
+        obj.age=eval("(" +obj.age+ ")");
+
+        
+        obj1.fname+" "+obj.birth;
+        const obj2 = {fname: "Mr",lname:"john",today:new Date(), age: 30, city: "New York",fullname:function(){
+            return this.fname+" "+this.lname;
+        }};
+        obj2.fullname=obj2.fullname.toString();
+        const myJSON1 = JSON.stringify(obj2);
+        const arr = ["John", "Peter", "Sally", "Jane"];
+        const myJSON2=JSON.stringify(arr);
+        
+        
+        const loc1={fname:"ramu",color:"black",age:3};
+        const jsonl1=JSON.stringify(loc1);
+        localStorage.setItem("l1",jsonl1);
+        sessionStorage.setItem("name","sri");
+
+       const jsonl2= localStorage.getItem("l1");
+       const loc2=JSON.parse(jsonl2);
+       
+       
+       document.getElementById("demo").innerHTML=obj.fname+" "+obj.lname+", "+obj.birth+" "+obj.age()+"<br>"+
+      myJSON1+"<br>"+"<br>"+myJSON2+"<br>"+loc2.fname+"<br>"+text;
+   </script>
+</body>
+</html>
+
