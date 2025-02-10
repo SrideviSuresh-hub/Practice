@@ -368,6 +368,36 @@ var Employee = /** @class */ (function (_super) {
 }(Person));
 var emp1 = new Employee('john', 28, 'analyst');
 console.log(emp1.introduce());
+var Animal = /** @class */ (function () {
+    function Animal(name, color) {
+        this.name = 'aaa';
+        this.color = 'bbb';
+        this.name = name;
+        this.color = color;
+    }
+    Animal.prototype.getName = function () {
+        return this.name;
+    };
+    return Animal;
+}());
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog(name, color, age) {
+        var _this = _super.call(this, name, color) || this;
+        _this.age = age;
+        return _this;
+    }
+    Dog.prototype.getColor = function () {
+        return this.color;
+    };
+    Dog.getAge = function () {
+        return this.age;
+    };
+    Dog.age = 5;
+    return Dog;
+}(Animal));
+var dog1 = new Dog('nnn', 'black', 5);
+console.log(dog1.getColor() + "   " + dog1.getName() + " " + Dog.getAge());
 // let biggint=9007199254740991n;
 // interface product{
 //     id:number,

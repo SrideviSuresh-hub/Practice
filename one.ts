@@ -428,6 +428,37 @@ class Employee extends Person{
 let emp1=new Employee('john',28,'analyst');
 console.log(emp1.introduce());
 
+abstract class Animal{
+   name='aaa';
+  color='bbb'
+
+  constructor( name:string,color:string, ){
+    this.name=name;
+    this.color=color;
+  }
+
+  getName():string{
+    return this.name;
+  }
+ abstract getColor():string;
+}
+
+class Dog extends Animal{
+ static age=5;
+   constructor(name:string,color:string,private age:number){
+      super(name,color);
+   }
+   getColor(): string {
+     return this.color;
+   } 
+  static getAge():number{
+    return this.age;
+   }
+}
+
+
+let dog1=new Dog('nnn','black',5);
+console.log(dog1.getColor()+"   "+dog1.getName()+" "+Dog.getAge());
 
 
 
